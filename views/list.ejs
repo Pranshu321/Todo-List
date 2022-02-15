@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Todo List</title>
+</head>
+
+<body>
+  <div class="box" id="heading">
+    <h1> <%= KindofDay %> </h1>
+  </div>
+
+  <div class="box">
+    <% for(var i =0; i<newlistitems.length ; i++){ %>
+    <div class="item">
+      <input type="checkbox">
+      <p><%= newlistitems[i] %></p>
+    </div>
+    <% } %>
+    
+    <form action="/" method="post">
+      <input type="text" name="newitem" placeholder="New Task" autocomplete="off">
+      <button type="submit" name="button">+</button>
+    </form>
+  </div>
+  <footer class="footer">
+    <p>Copyright &copy; Reserved by Beluga ❤️</p>
+  </footer>
+</body>
+
+</html>
